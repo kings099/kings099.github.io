@@ -157,8 +157,9 @@ export default function Home() {
             <p className="eyebrow">Undergraduate researcher in artificial intelligence</p>
             <h1>Hengyu Jin</h1>
             <p className="hero-lede">
-              I study reasoning and reliability in foundation models, with a
-              focus on mechanistic interpretability and AI agents.
+              I am interested in the reasoning capabilities and reliability of
+              foundation models, particularly how they behave and interact when
+              deployed as agents in complex environments.
             </p>
             <div className="hero-facts" aria-label="Academic profile">
               <div className="hero-fact">
