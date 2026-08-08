@@ -1,51 +1,46 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
 
 const title = "Hengyu Jin | Academic Homepage";
 const description =
   "Hengyu Jin is an undergraduate researcher working on mechanistic interpretability, reasoning in foundation models, and reliable AI agents.";
+const siteUrl = "https://kings099.github.io";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "localhost:3000";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.startsWith("localhost") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
-  const image = `${origin}/og.png`;
-
-  return {
-    metadataBase: new URL(origin),
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  keywords: [
+    "Hengyu Jin",
+    "mechanistic interpretability",
+    "reasoning in foundation models",
+    "foundation models",
+    "AI agents",
+    "activation steering",
+  ],
+  authors: [{ name: "Hengyu Jin" }],
+  openGraph: {
+    type: "website",
+    url: siteUrl,
     title,
     description,
-    keywords: [
-      "Hengyu Jin",
-      "mechanistic interpretability",
-      "reasoning in foundation models",
-      "foundation models",
-      "AI agents",
-      "activation steering",
+    siteName: "Hengyu Jin",
+    images: [
+      {
+        url: "/og.png",
+        width: 1731,
+        height: 909,
+        alt: "Hengyu Jin — Reasoning, Reliability, AI Agents",
+      },
     ],
-    authors: [{ name: "Hengyu Jin" }],
-    openGraph: {
-      type: "website",
-      title,
-      description,
-      siteName: "Hengyu Jin",
-      images: [{ url: image, width: 1731, height: 909, alt: "Hengyu Jin — Reasoning, Reliability, AI Agents" }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [image],
-    },
-  };
-}
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og.png"],
+  },
+};
 
 export default function RootLayout({
   children,
