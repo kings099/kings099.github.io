@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Hengyu Jin | Academic Homepage";
+const title = "Hengyu Jin";
 const description =
   "Hengyu Jin is an undergraduate researcher working on mechanistic interpretability, reasoning in foundation models, and reliable AI agents.";
 const siteUrl = "https://kings099.github.io";
