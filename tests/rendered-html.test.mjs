@@ -5,7 +5,7 @@ import test from "node:test";
 test("statically exports Hengyu Jin's academic homepage", async () => {
   const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
   assert.match(html, /<title>Hengyu Jin \| Academic Homepage<\/title>/i);
-  assert.match(html, /Selected publications/);
+  assert.match(html, /Publications &amp; preprints/);
   assert.match(html, /Final Checkpoints Are Not Enough/);
   assert.match(html, /https:\/\/aclanthology\.org\/2026\.findings-acl\.226\//);
   assert.match(html, /10\.1109\/TAFFC\.2026\.3709312/);

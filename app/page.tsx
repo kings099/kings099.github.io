@@ -5,7 +5,7 @@ const publications = [
     title:
       "Final Checkpoints Are Not Enough: Analyzing Latent Reasoning Faithfulness Along Training Trajectories",
     authors: "Hengyu Jin, Shu Yang, Di Wang",
-    venue: "arXiv · Under review at NAACL",
+    venue: "arXiv · Under review at ACL Rolling Review",
     summary:
       "Tracks how latent reasoning faithfulness evolves across training checkpoints, revealing dynamics that final-checkpoint evaluation alone can miss.",
     links: [
@@ -20,7 +20,7 @@ const publications = [
       "RISER: Orchestrating Latent Reasoning Skills for Adaptive Activation Steering",
     authors:
       "Wencheng Ye, Xiaoyang Yuan, Yi Bin, Hengyu Jin, Liang Peng, Pengpeng Zeng, Heng Tao Shen",
-    venue: "Findings of the Association for Computational Linguistics: ACL 2026",
+    venue: "Findings of ACL 2026",
     summary:
       "A plug-and-play activation-steering framework that adaptively composes reusable latent reasoning skills for more accurate and token-efficient reasoning.",
     links: [
@@ -38,12 +38,12 @@ const publications = [
     year: "2026",
     badge: "IEEE TAC",
     title:
-      "CORA: A Cognitive Reframing Dialogue Agent for Supporting Emotion Regulation",
+      "CORA: A Cognitive Reframing Dialogue Agent Powered by Large Language Models",
     authors:
-      "Tiantian Chen, Zelin Li, Xuri Chen, Ying Shen, Hengyu Jin, Lin Zhang, Shengjie Zhao",
-    venue: "IEEE Transactions on Affective Computing",
+      "T. Chen, X. Chen, Y. Shen, L. Zhang, Hengyu Jin, C. Cheng",
+    venue: "Accepted · IEEE Transactions on Affective Computing",
     summary:
-      "A multi-turn dialogue agent grounded in cognitive behavioral therapy techniques for interactive cognitive reframing and emotion regulation.",
+      "A large-language-model-powered dialogue agent for multi-turn cognitive reframing grounded in cognitive behavioral therapy.",
     links: [
       {
         label: "DOI",
@@ -53,12 +53,12 @@ const publications = [
   },
   {
     year: "2026",
-    badge: "CHI EA",
+    badge: "CHI 2026",
     title:
       "Kairotask: Probing the Bridge Between Vague Intents and Spatiotemporal Contexts",
     authors:
       "Jiachen Du, Yuanhao Zhang, Hengyu Jin, Xinkai Zou, Junwei Zhu, Xinyi Fu",
-    venue: "Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems",
+    venue: "CHI 2026",
     summary:
       "A context-aware task assistant that uses language models to turn vague intentions into actionable spatiotemporal cues.",
     links: [
@@ -87,7 +87,7 @@ const experiences = [
     role: "Research Intern",
     period: "Jun 2026 — Present",
     location: "Remote",
-    advisor: "Prof. Biwei Huang, UC San Diego",
+    advisor: "Prof. Biwei Huang (UC San Diego)",
     projects: [
       "Execution-time failure verification for vision-language-action agents, including natural failure-data generation in Genie Sim.",
     ],
@@ -99,7 +99,7 @@ const experiences = [
     location: "Remote",
     advisor: "Prof. Xinyi Fu",
     projects: [
-      "Human-centered design and iOS development for context-aware schedule management, evaluated in an eight-day field study.",
+      "Kairotask: context-aware scheduling from vague intentions, combining Qwen-Plus reasoning with an iOS geofencing field study.",
     ],
   },
   {
@@ -110,7 +110,7 @@ const experiences = [
     advisor: "Prof. Ying Shen",
     projects: [
       "Hidden-state steering for latent reasoning through reusable cognitive primitive vectors.",
-      "CORA, a CBT-guided post-training and evaluation pipeline for multi-turn dialogue agents.",
+      "CORA, including LoRA-based supervised fine-tuning and blinded evaluation for CBT-guided multi-turn dialogue.",
     ],
   },
 ];
@@ -265,7 +265,7 @@ export default function Home() {
           <div className="section-heading publication-heading">
             <div>
               <p className="section-index">02 / Publications</p>
-              <h2>Selected publications</h2>
+              <h2>Publications &amp; preprints</h2>
             </div>
             <p>
               Official paper pages are linked through arXiv, ACL Anthology, and
@@ -341,28 +341,29 @@ export default function Home() {
             <article className="project-card project-featured">
               <div className="project-topline">
                 <span>Co-founder · Full-stack lead</span>
-                <span>2025 — 2026</span>
+                <span>Nov 2025 — Feb 2026</span>
               </div>
               <h3>Follo AI</h3>
               <p className="project-tagline">
-                A context-aware intelligent schedule assistant built around a
-                response–perception–memory architecture.
+                A context-aware scheduling agent extended from the Kairotask
+                framework.
               </p>
               <p>
-                Designed the LLM routing engine, multimodal iOS perception
-                pipeline, and structured memory layer; delivered a high-fidelity
-                MVP and advanced the project to the financing phase.
+                Designed a response–perception–memory architecture combining
+                LLM-based intent interpretation, environmental context, and
+                structured user memory; led mobile and backend development and
+                delivered a functional MVP.
               </p>
               <div className="project-tags">
                 <span>AI agents</span>
                 <span>iOS</span>
-                <span>Multimodal systems</span>
+                <span>Context awareness</span>
               </div>
             </article>
             <article className="project-card">
               <div className="project-topline">
                 <span>Team lead · Core developer</span>
-                <span>2025</span>
+                <span>Jun 2025 — Sep 2025</span>
               </div>
               <h3>Scrollscape</h3>
               <p className="project-tagline">
@@ -370,9 +371,9 @@ export default function Home() {
                 Vision Pro.
               </p>
               <p>
-                Built spatial interactions, a virtual–real portal, and an
-                automated aesthetic evaluation system. Awarded First Prize in
-                the East China Region of the China Collegiate Computing Contest.
+                Implemented visionOS interaction and rendering components,
+                including gesture-based navigation, virtual–physical scene
+                transitions, and an automated aesthetic-evaluation module.
               </p>
               <div className="project-tags">
                 <span>Vision Pro</span>
@@ -404,8 +405,8 @@ export default function Home() {
             <article>
               <p className="background-label">Toolbox</p>
               <h3>Building research systems</h3>
-              <p>Python · C++ · Swift · SwiftUI · React · FastAPI</p>
-              <p className="background-detail">Machine learning · Computer vision · Agent systems</p>
+              <p>Python · C++ · Swift · PyTorch · Hugging Face Transformers</p>
+              <p className="background-detail">SwiftUI · React · FastAPI · Git · Linux · Slurm</p>
             </article>
           </div>
         </section>
