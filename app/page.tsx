@@ -93,6 +93,16 @@ const experiences = [
     ],
   },
   {
+    organization: "Tsinghua University",
+    role: "Research Intern",
+    period: "Jun 2025 — Oct 2025",
+    location: "Remote",
+    advisor: "Prof. Xinyi Fu",
+    projects: [
+      "Human-centered design and iOS development for context-aware schedule management, evaluated in an eight-day field study.",
+    ],
+  },
+  {
     organization: "Tongji University",
     role: "Research Intern",
     period: "Oct 2024 — Dec 2025",
@@ -101,16 +111,6 @@ const experiences = [
     projects: [
       "Hidden-state steering for latent reasoning through reusable cognitive primitive vectors.",
       "CORA, a CBT-guided post-training and evaluation pipeline for multi-turn dialogue agents.",
-    ],
-  },
-  {
-    organization: "Tsinghua University",
-    role: "Research Intern",
-    period: "Jun 2025 — Oct 2025",
-    location: "Remote",
-    advisor: "Prof. Xinyi Fu",
-    projects: [
-      "Human-centered design and iOS development for context-aware schedule management, evaluated in an eight-day field study.",
     ],
   },
 ];
