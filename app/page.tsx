@@ -184,6 +184,22 @@ export default function Home() {
               <a className="button button-secondary" href="mailto:hengyuking@gmail.com">
                 Email me <span aria-hidden="true">↗</span>
               </a>
+              <a
+                className="button button-secondary"
+                href="https://scholar.google.com/citations?user=R7hqHtEAAAAJ&hl=en&oi=ao"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Google Scholar <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                className="button button-secondary"
+                href="https://github.com/kings099"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </div>
 
@@ -210,7 +226,8 @@ export default function Home() {
               <time dateTime="2026-07">Jul 2026</time>
               <p>
                 Released our first-author preprint on latent reasoning
-                faithfulness across training trajectories.
+                faithfulness across training trajectories and submitted it to
+                ACL Rolling Review.
               </p>
             </article>
             <article>
@@ -219,7 +236,7 @@ export default function Home() {
             </article>
             <article>
               <time dateTime="2026-04">Apr 2026</time>
-              <p>Kairotask was published at CHI EA 2026.</p>
+              <p>Kairotask was published at CHI 2026.</p>
             </article>
           </div>
         </section>
@@ -418,7 +435,19 @@ export default function Home() {
           <a href="mailto:hengyuking@gmail.com">hengyuking@gmail.com</a>
         </div>
         <div className="footer-meta">
-          <a href="/Hengyu_Jin_CV.pdf">Download CV</a>
+          <div className="footer-links">
+            <a
+              href="https://scholar.google.com/citations?user=R7hqHtEAAAAJ&hl=en&oi=ao"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Google Scholar <span aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/kings099" target="_blank" rel="noreferrer">
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+            <a href="/Hengyu_Jin_CV.pdf">Download CV</a>
+          </div>
           <p>© 2026 Hengyu Jin</p>
         </div>
       </footer>

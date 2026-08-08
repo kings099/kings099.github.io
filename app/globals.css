@@ -742,6 +742,13 @@ a {
   font-size: 0.8rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem 1.15rem;
+}
+
 .footer-meta p {
   margin: 0;
 }
@@ -941,6 +948,10 @@ a {
 
   .footer-meta {
     justify-items: start;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 }
 
