@@ -154,19 +154,28 @@ export default function Home() {
       <main id="main-content">
         <section className="hero section-shell" id="about">
           <div className="hero-copy">
-            <p className="eyebrow">Undergraduate researcher · Tongji University</p>
+            <p className="eyebrow">Undergraduate researcher in artificial intelligence</p>
             <h1>Hengyu Jin</h1>
             <p className="hero-lede">
-              I study how foundation models reason, fail, and interact—toward
-              more faithful reasoning systems and reliable AI agents.
+              I study reasoning and reliability in foundation models, with a
+              focus on mechanistic interpretability and AI agents.
             </p>
-            <p className="hero-bio">
-              I am a Software Engineering undergraduate at Tongji University,
-              currently a visiting student at PRADA Lab, KAUST, and a research
-              intern at Aether AI. My work spans latent reasoning, activation
-              steering, verifiable agent environments, and dependable embodied
-              agents.
-            </p>
+            <div className="hero-facts" aria-label="Academic profile">
+              <div className="hero-fact">
+                <p>Education</p>
+                <div>
+                  <strong>Tongji University</strong>
+                  <span>B.Eng. in Software Engineering · GPA 4.60 / 5.00</span>
+                </div>
+              </div>
+              <div className="hero-fact">
+                <p>Current</p>
+                <div>
+                  <strong>Visiting Student · PRADA Lab, KAUST</strong>
+                  <span>Research Intern · Aether AI</span>
+                </div>
+              </div>
+            </div>
             <div className="hero-actions">
               <a className="button button-primary" href="/Hengyu_Jin_CV.pdf">
                 Curriculum Vitae <span aria-hidden="true">↓</span>
@@ -178,12 +187,11 @@ export default function Home() {
           </div>
 
           <aside className="focus-panel" aria-label="Research focus">
-            <div className="focus-number">01</div>
-            <p className="focus-label">Research focus</p>
+            <p className="focus-label">Research interests</p>
             <ul>
-              <li>Reasoning faithfulness across training</li>
-              <li>Controllable latent representations</li>
-              <li>Verifiable and reliable AI agents</li>
+              <li>Mechanistic Interpretability</li>
+              <li>Reasoning in Foundation Models</li>
+              <li>Reliable AI Agents</li>
             </ul>
             <div className="focus-status">
               <span className="status-dot" aria-hidden="true" />
@@ -218,35 +226,35 @@ export default function Home() {
         <section className="section-shell content-section" id="research">
           <div className="section-heading">
             <p className="section-index">01 / Research</p>
-            <h2>Questions I work on</h2>
+            <h2>Research interests</h2>
             <p>
-              My work connects mechanistic analysis with systems that can be
-              evaluated in realistic, verifiable settings.
+              My work centers on understanding how foundation models reason
+              and building AI agents that behave reliably in practice.
             </p>
           </div>
           <div className="research-grid">
             <article className="research-card">
               <span>01</span>
-              <h3>Latent reasoning &amp; faithfulness</h3>
+              <h3>Mechanistic interpretability</h3>
               <p>
-                How do hidden-state reasoning processes emerge during training,
-                and when do they causally support a model&apos;s answer?
+                Understanding and intervening in internal representations
+                through training-dynamics analysis and activation steering.
               </p>
             </article>
             <article className="research-card">
               <span>02</span>
-              <h3>Reliable AI agents</h3>
+              <h3>Reasoning in foundation models</h3>
               <p>
-                How can agents detect execution failures, recover early, and be
-                evaluated with grounded, reproducible environments?
+                Studying how models reason faithfully and efficiently across
+                latent and explicit reasoning settings.
               </p>
             </article>
             <article className="research-card">
               <span>03</span>
-              <h3>Human-centered AI systems</h3>
+              <h3>Reliable AI agents</h3>
               <p>
-                How can language models translate vague human intentions into
-                useful actions while preserving agency and context?
+                Building verifiable multi-user and embodied-agent systems that
+                can detect failures, recover, and be evaluated reproducibly.
               </p>
             </article>
           </div>

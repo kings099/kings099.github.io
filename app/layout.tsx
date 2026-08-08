@@ -4,7 +4,7 @@ import "./globals.css";
 
 const title = "Hengyu Jin | Academic Homepage";
 const description =
-  "Hengyu Jin is an undergraduate researcher working on reasoning and reliability in foundation models and AI agents.";
+  "Hengyu Jin is an undergraduate researcher working on mechanistic interpretability, reasoning in foundation models, and reliable AI agents.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -24,7 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: [
       "Hengyu Jin",
-      "latent reasoning",
+      "mechanistic interpretability",
+      "reasoning in foundation models",
       "foundation models",
       "AI agents",
       "activation steering",

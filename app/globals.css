@@ -177,11 +177,48 @@ a {
   letter-spacing: -0.025em;
 }
 
-.hero-bio {
-  max-width: 700px;
+.hero-facts {
+  display: grid;
+  max-width: 760px;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.hero-fact {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.25rem;
+  padding: 0.9rem 0;
+}
+
+.hero-fact + .hero-fact {
+  border-top: 1px solid var(--line);
+}
+
+.hero-fact p {
   margin: 0;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-fact div {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.hero-fact strong {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.hero-fact span {
   color: var(--ink-soft);
-  font-size: 1.02rem;
+  font-size: 0.86rem;
 }
 
 .hero-actions {
@@ -244,12 +281,8 @@ a {
   background: var(--accent);
 }
 
-.focus-number {
-  margin-bottom: 2.8rem;
-  color: var(--line-dark);
-  font-family: var(--serif);
-  font-size: 3rem;
-  line-height: 1;
+.focus-panel .focus-label {
+  margin-bottom: 1rem;
 }
 
 .focus-panel ul {
