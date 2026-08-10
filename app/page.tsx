@@ -271,8 +271,9 @@ export default function Home() {
               <span>03</span>
               <h3>Reliable AI agents</h3>
               <p>
-                Building verifiable multi-user and embodied-agent systems that
-                can detect failures, recover, and be evaluated reproducibly.
+                Building verifiable environments for multi-user agents,
+                alongside execution-time failure detection and recovery methods
+                for embodied agents.
               </p>
             </article>
           </div>
