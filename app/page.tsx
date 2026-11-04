@@ -84,7 +84,7 @@ const publications = [
     badge: "Preprint",
     title: "RobotAgentBench: Towards Open-world Robot Autonomy",
     authors:
-      "L. Mao†, J. Cao†, L. He†, W. Xu, Y. Yan, Hengyu Jin, and 19 others († equal contribution)",
+      "Lingjun Mao†, Jinglin Cao†, Lukun He†, Wenpeng Xu, Yuchen Yan, Hengyu Jin, Zijun Zhang, Jinzhou Tang, Songyao Jin, Ziche Liu, Yifei Shao, Junbo Huang, Fang Nan, Ruobing Han, Ziqiao Xi, Ziming Xu, Shuang Liang, Sibo Zhu, Wenyi Wu, Xinyue Wang, Yiming Huang, Xinkai Zou, Gao Zhu, Kun Zhou, Biwei Huang († equal contribution)",
     venue: "arXiv",
     summary:
       "A benchmark for robot agents in realistic household environments, evaluating task discovery, reasoning, manipulation, recovery, and robustness under a shared planning–execution–verification framework.",
