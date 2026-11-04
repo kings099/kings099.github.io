@@ -13,6 +13,11 @@ test("statically exports Hengyu Jin's academic homepage", async () => {
   assert.match(html, /10\.1145\/3772363\.3798333/);
   assert.match(html, /scholar\.google\.com\/citations\?user=R7hqHtEAAAAJ/);
   assert.match(html, /https:\/\/github\.com\/kings099/);
+  assert.match(html, /mailto:jhy99@tongji\.edu\.cn/);
+  assert.doesNotMatch(html, /hengyuking@gmail\.com/);
+  assert.match(html, /Concord: An Interactive Environment/);
+  assert.match(html, /RobotAgentBench/);
+  assert.match(html, /for Supporting Emotion Regulation/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Your site is taking shape/i);
 });
 

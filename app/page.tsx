@@ -15,6 +15,17 @@ const publications = [
   },
   {
     year: "2026",
+    badge: "First author",
+    title:
+      "Concord: An Interactive Environment for Evaluating Multi-User Agents under Distributed Information and Consent",
+    authors: "Hengyu Jin, Shu Yang, Di Wang",
+    venue: "Under review at ACL Rolling Review",
+    summary:
+      "An interactive environment where one agent serves several interdependent users, showing that obtaining users' consent, not gathering their information, is the main bottleneck.",
+    links: [],
+  },
+  {
+    year: "2026",
     badge: "Findings of ACL",
     title:
       "RISER: Orchestrating Latent Reasoning Skills for Adaptive Activation Steering",
@@ -36,29 +47,12 @@ const publications = [
   },
   {
     year: "2026",
-    badge: "IEEE TAC",
-    title:
-      "CORA: A Cognitive Reframing Dialogue Agent Powered by Large Language Models",
-    authors:
-      "T. Chen, X. Chen, Y. Shen, L. Zhang, Hengyu Jin, C. Cheng",
-    venue: "Accepted · IEEE Transactions on Affective Computing",
-    summary:
-      "A large-language-model-powered dialogue agent for multi-turn cognitive reframing grounded in cognitive behavioral therapy.",
-    links: [
-      {
-        label: "DOI",
-        href: "https://doi.org/10.1109/TAFFC.2026.3709312",
-      },
-    ],
-  },
-  {
-    year: "2026",
-    badge: "CHI 2026",
+    badge: "CHI EA 2026",
     title:
       "Kairotask: Probing the Bridge Between Vague Intents and Spatiotemporal Contexts",
     authors:
       "Jiachen Du, Yuanhao Zhang, Hengyu Jin, Xinkai Zou, Junwei Zhu, Xinyi Fu",
-    venue: "CHI 2026",
+    venue: "CHI 2026 Extended Abstracts",
     summary:
       "A context-aware task assistant that uses language models to turn vague intentions into actionable spatiotemporal cues.",
     links: [
@@ -68,18 +62,52 @@ const publications = [
       },
     ],
   },
+  {
+    year: "2026",
+    badge: "IEEE TAC",
+    title:
+      "CORA: A Cognitive Reframing Dialogue Agent for Supporting Emotion Regulation",
+    authors:
+      "T. Chen, Z. Li, X. Chen, Y. Shen, Hengyu Jin, L. Zhang, S. Zhao",
+    venue: "IEEE Transactions on Affective Computing, 17(3): 2432–2447",
+    summary:
+      "A dialogue agent that supports emotion regulation through multi-turn cognitive reframing grounded in cognitive behavioral therapy.",
+    links: [
+      {
+        label: "DOI",
+        href: "https://doi.org/10.1109/TAFFC.2026.3709312",
+      },
+    ],
+  },
+  {
+    year: "2026",
+    badge: "Preprint",
+    title: "RobotAgentBench: Towards Open-world Robot Autonomy",
+    authors:
+      "L. Mao†, J. Cao†, L. He†, W. Xu, Y. Yan, Hengyu Jin, and 19 others († equal contribution)",
+    venue: "arXiv",
+    summary:
+      "A benchmark for robot agents in realistic household environments, evaluating task discovery, reasoning, manipulation, recovery, and robustness under a shared planning–execution–verification framework.",
+    links: [
+      { label: "arXiv", href: "https://arxiv.org/abs/2610.34649" },
+      {
+        label: "Project",
+        href: "https://aetherlabsai.github.io/RobotAgentBench/",
+      },
+    ],
+  },
 ];
 
 const experiences = [
   {
     organization: "PRADA Lab, KAUST",
     role: "Visiting Student",
-    period: "Jul 2026 — Present",
-    location: "Thuwal, Saudi Arabia",
+    period: "Mar 2026 — Oct 2026",
+    location: "Saudi Arabia & Remote",
     advisor: "Prof. Di Wang",
     projects: [
-      "Mechanistic analysis of latent reasoning faithfulness across training trajectories.",
-      "MUENV, a verifiable interactive environment for multi-user agent training and evaluation.",
+      "Latent reasoning faithfulness along training trajectories: verified counterfactual edits and latent-state interventions show that accuracy can rise while responsiveness to the required reasoning path falls.",
+      "Concord: an interactive environment with 309 tasks and 190 groups of simulated users for evaluating agents that serve several interdependent users.",
     ],
   },
   {
@@ -89,7 +117,19 @@ const experiences = [
     location: "Remote",
     advisor: "Prof. Biwei Huang (UC San Diego)",
     projects: [
-      "Execution-time failure verification for vision-language-action agents, including natural failure-data generation in Genie Sim.",
+      "RobotAgentBench: co-authored a benchmark for open-world robot autonomy, contributing to the construction of its simulation data.",
+      "Execution-time verification for robot-use agents, detecting failures during VLA execution, with natural failure-data generation in Genie Sim.",
+    ],
+  },
+  {
+    organization: "Tongji University",
+    role: "Undergraduate Researcher",
+    period: "Oct 2024 — Dec 2025",
+    location: "Shanghai, China",
+    advisor: "",
+    projects: [
+      "RISER: hidden-state steering with reusable reasoning vectors for frozen LLMs, giving 3.4–6.5-point average accuracy gains over the base models and 2–3× higher token efficiency than chain-of-thought.",
+      "CORA and follow-up work on emotional support (advisor: Prof. Ying Shen): built a blinded evaluation platform, then used LLaMA-Factory to fine-tune Qwen2.5-7B-Instruct with LoRA for different personality styles.",
     ],
   },
   {
@@ -100,17 +140,6 @@ const experiences = [
     advisor: "Prof. Xinyi Fu",
     projects: [
       "Kairotask: context-aware scheduling from vague intentions, combining Qwen-Plus reasoning with an iOS geofencing field study.",
-    ],
-  },
-  {
-    organization: "Tongji University",
-    role: "Research Intern",
-    period: "Oct 2024 — Dec 2025",
-    location: "Shanghai, China",
-    advisor: "Prof. Ying Shen",
-    projects: [
-      "Hidden-state steering for latent reasoning through reusable cognitive primitive vectors.",
-      "CORA, including LoRA-based supervised fine-tuning and blinded evaluation for CBT-guided multi-turn dialogue.",
     ],
   },
 ];
@@ -145,7 +174,7 @@ export default function Home() {
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
           </div>
-          <a className="nav-contact" href="mailto:hengyuking@gmail.com">
+          <a className="nav-contact" href="mailto:jhy99@tongji.edu.cn">
             Contact <span aria-hidden="true">↗</span>
           </a>
         </nav>
@@ -157,9 +186,8 @@ export default function Home() {
             <p className="eyebrow">Undergraduate researcher in artificial intelligence</p>
             <h1>Hengyu Jin</h1>
             <p className="hero-lede">
-              I am interested in the reasoning capabilities and reliability of
-              foundation models, particularly how they behave and interact when
-              deployed as agents in complex environments.
+              I study reasoning and reliability in foundation models, and how AI
+              agents work with the people they serve.
             </p>
             <div className="hero-facts" aria-label="Academic profile">
               <div className="hero-fact">
@@ -172,8 +200,8 @@ export default function Home() {
               <div className="hero-fact">
                 <p>Current</p>
                 <div>
-                  <strong>Visiting Student · PRADA Lab, KAUST</strong>
-                  <span>Research Intern · Aether AI</span>
+                  <strong>Research Intern · Aether AI</strong>
+                  <span>Previously Visiting Student · PRADA Lab, KAUST</span>
                 </div>
               </div>
             </div>
@@ -181,7 +209,7 @@ export default function Home() {
               <a className="button button-primary" href="/Hengyu_Jin_CV.pdf">
                 Curriculum Vitae <span aria-hidden="true">↓</span>
               </a>
-              <a className="button button-secondary" href="mailto:hengyuking@gmail.com">
+              <a className="button button-secondary" href="mailto:jhy99@tongji.edu.cn">
                 Email me <span aria-hidden="true">↗</span>
               </a>
               <a
@@ -206,9 +234,9 @@ export default function Home() {
           <aside className="focus-panel" aria-label="Research focus">
             <p className="focus-label">Research interests</p>
             <ul>
-              <li>Mechanistic Interpretability</li>
-              <li>Reasoning in Foundation Models</li>
-              <li>Reliable AI Agents</li>
+              <li>Reasoning and Reliability in Foundation Models</li>
+              <li>AI Agents</li>
+              <li>Human–AI Interaction</li>
             </ul>
             <div className="focus-status">
               <span className="status-dot" aria-hidden="true" />
@@ -223,6 +251,24 @@ export default function Home() {
           </div>
           <div className="updates-list">
             <article>
+              <time dateTime="2026-10">Oct 2026</time>
+              <p>
+                Released RobotAgentBench, a benchmark for open-world robot
+                autonomy, with Aether AI.
+              </p>
+            </article>
+            <article>
+              <time dateTime="2026-10">Oct 2026</time>
+              <p>
+                Submitted Concord, my second first-author paper on multi-user
+                agents, to ACL Rolling Review.
+              </p>
+            </article>
+            <article>
+              <time dateTime="2026-07">Jul 2026</time>
+              <p>CORA was published in IEEE Transactions on Affective Computing.</p>
+            </article>
+            <article>
               <time dateTime="2026-07">Jul 2026</time>
               <p>
                 Released our first-author preprint on latent reasoning
@@ -236,7 +282,7 @@ export default function Home() {
             </article>
             <article>
               <time dateTime="2026-04">Apr 2026</time>
-              <p>Kairotask was published at CHI 2026.</p>
+              <p>Kairotask appeared in the CHI 2026 Extended Abstracts.</p>
             </article>
           </div>
         </section>
@@ -253,27 +299,28 @@ export default function Home() {
           <div className="research-grid">
             <article className="research-card">
               <span>01</span>
-              <h3>Mechanistic interpretability</h3>
+              <h3>Reasoning and reliability</h3>
               <p>
-                Understanding and intervening in internal representations
-                through training-dynamics analysis and activation steering.
+                Studying how foundation models reason in latent and explicit
+                forms, and whether their reasoning stays faithful as they are
+                trained.
               </p>
             </article>
             <article className="research-card">
               <span>02</span>
-              <h3>Reasoning in foundation models</h3>
+              <h3>AI agents</h3>
               <p>
-                Studying how models reason faithfully and efficiently across
-                latent and explicit reasoning settings.
+                Building interactive environments for agents that serve several
+                users, and studying robot-use agents that plan, act, and
+                recover from failures.
               </p>
             </article>
             <article className="research-card">
               <span>03</span>
-              <h3>Reliable AI agents</h3>
+              <h3>Human–AI interaction</h3>
               <p>
-                Building verifiable environments for multi-user agents,
-                alongside execution-time failure detection and recovery methods
-                for embodied agents.
+                Understanding how agents can learn what a particular person
+                wants from personal context and interaction.
               </p>
             </article>
           </div>
@@ -303,6 +350,7 @@ export default function Home() {
                   <h3>{publication.title}</h3>
                   <AuthorLine authors={publication.authors} />
                   <p className="publication-summary">{publication.summary}</p>
+                  {publication.links.length > 0 ? (
                   <div className="publication-links" aria-label={`Links for ${publication.title}`}>
                     {publication.links.map((link) => (
                       <a
@@ -315,6 +363,7 @@ export default function Home() {
                       </a>
                     ))}
                   </div>
+                  ) : null}
                 </div>
               </article>
             ))}
@@ -337,7 +386,13 @@ export default function Home() {
                 <div className="timeline-content">
                   <h3>{experience.organization}</h3>
                   <p className="timeline-role">
-                    {experience.role} <span>·</span> Advisor: {experience.advisor}
+                    {experience.role}
+                    {experience.advisor ? (
+                      <>
+                        {" "}
+                        <span>·</span> Advisor: {experience.advisor}
+                      </>
+                    ) : null}
                   </p>
                   <ul>
                     {experience.projects.map((project) => (
@@ -411,7 +466,7 @@ export default function Home() {
             <article>
               <p className="background-label">Education</p>
               <h3>Tongji University</h3>
-              <p>B.Eng. in Software Engineering · Sep 2023 — Present</p>
+              <p>B.Eng. in Software Engineering · Sep 2023 — Jun 2027 (expected)</p>
               <p className="background-detail">GPA 4.60 / 5.00 · 91.01 / 100</p>
             </article>
             <article>
@@ -424,7 +479,7 @@ export default function Home() {
               <p className="background-label">Toolbox</p>
               <h3>Building research systems</h3>
               <p>Python · C++ · Swift · PyTorch · Hugging Face Transformers</p>
-              <p className="background-detail">SwiftUI · React · FastAPI · Git · Linux · Slurm</p>
+              <p className="background-detail">LLaMA-Factory · SwiftUI · React · FastAPI · Git · Linux · Slurm</p>
             </article>
           </div>
         </section>
@@ -433,7 +488,7 @@ export default function Home() {
       <footer className="site-footer section-shell">
         <div>
           <p className="footer-title">Let&apos;s talk research.</p>
-          <a href="mailto:hengyuking@gmail.com">hengyuking@gmail.com</a>
+          <a href="mailto:jhy99@tongji.edu.cn">jhy99@tongji.edu.cn</a>
         </div>
         <div className="footer-meta">
           <div className="footer-links">
