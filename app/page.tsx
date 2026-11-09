@@ -206,9 +206,6 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-actions">
-              <a className="button button-primary" href="/Hengyu_Jin_CV.pdf">
-                Curriculum Vitae <span aria-hidden="true">↓</span>
-              </a>
               <a className="button button-secondary" href="mailto:jhy99@tongji.edu.cn">
                 Email me <span aria-hidden="true">↗</span>
               </a>
@@ -502,7 +499,6 @@ export default function Home() {
             <a href="https://github.com/kings099" target="_blank" rel="noreferrer">
               GitHub <span aria-hidden="true">↗</span>
             </a>
-            <a href="/Hengyu_Jin_CV.pdf">Download CV</a>
           </div>
           <p>© 2026 Hengyu Jin</p>
         </div>
