@@ -233,7 +233,7 @@ export default function Home() {
             <ul>
               <li>Reasoning and Reliability in Foundation Models</li>
               <li>AI Agents</li>
-              <li>Human–AI Interaction</li>
+              <li>Robot-Use Agent</li>
             </ul>
             <div className="focus-status">
               <span className="status-dot" aria-hidden="true" />
@@ -314,7 +314,7 @@ export default function Home() {
             </article>
             <article className="research-card">
               <span>03</span>
-              <h3>Human–AI interaction</h3>
+              <h3>Robot-Use Agent</h3>
               <p>
                 Understanding how agents can learn what a particular person
                 wants from personal context and interaction.
