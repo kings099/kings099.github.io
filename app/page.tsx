@@ -160,7 +160,6 @@ export default function Home() {
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
           </div>
           <a className="nav-contact" href="mailto:jhy99@tongji.edu.cn">
             Contact <span aria-hidden="true">↗</span>
@@ -374,82 +373,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell content-section" id="projects">
-          <div className="section-heading">
-            <h2>Selected projects</h2>
-          </div>
-          <div className="project-grid">
-            <article className="project-card project-featured">
-              <div className="project-topline">
-                <span>Co-founder · Full-stack lead</span>
-                <span>Nov 2025 — Feb 2026</span>
-              </div>
-              <h3>Follo AI</h3>
-              <p className="project-tagline">
-                A context-aware scheduling agent extended from the Kairotask
-                framework.
-              </p>
-              <p>
-                Designed a response–perception–memory architecture combining
-                LLM-based intent interpretation, environmental context, and
-                structured user memory; led mobile and backend development and
-                delivered a functional MVP.
-              </p>
-              <div className="project-tags">
-                <span>AI agents</span>
-                <span>iOS</span>
-                <span>Context awareness</span>
-              </div>
-            </article>
-            <article className="project-card">
-              <div className="project-topline">
-                <span>Team lead · Core developer</span>
-                <span>Jun 2025 — Sep 2025</span>
-              </div>
-              <h3>Scrollscape</h3>
-              <p className="project-tagline">
-                An immersive Chinese-garden education experience for Apple
-                Vision Pro.
-              </p>
-              <p>
-                Implemented visionOS interaction and rendering components,
-                including gesture-based navigation, virtual–physical scene
-                transitions, and an automated aesthetic-evaluation module.
-              </p>
-              <div className="project-tags">
-                <span>Vision Pro</span>
-                <span>Spatial computing</span>
-                <span>Human–computer interaction</span>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section className="section-shell background-section" aria-labelledby="background-title">
-          <div className="background-heading">
-            <h2 id="background-title">Education &amp; recognition</h2>
-          </div>
-          <div className="background-grid">
-            <article>
-              <p className="background-label">Education</p>
-              <h3>Tongji University</h3>
-              <p>B.Eng. in Software Engineering · Sep 2023 — Jun 2027 (expected)</p>
-              <p className="background-detail">GPA 4.60 / 5.00 · 91.01 / 100</p>
-            </article>
-            <article>
-              <p className="background-label">Recognition</p>
-              <h3>Selected awards</h3>
-              <p>First Prize, China Collegiate Computing Contest — East China Region</p>
-              <p className="background-detail">First-grade Ethnic Class Special Scholarship, 2023–2025</p>
-            </article>
-            <article>
-              <p className="background-label">Toolbox</p>
-              <h3>Building research systems</h3>
-              <p>Python · C++ · Swift · PyTorch · Hugging Face Transformers</p>
-              <p className="background-detail">LLaMA-Factory · SwiftUI · React · FastAPI · Git · Linux · Slurm</p>
-            </article>
-          </div>
-        </section>
       </main>
 
       <footer className="site-footer section-shell">
