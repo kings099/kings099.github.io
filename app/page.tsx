@@ -89,16 +89,6 @@ const publications = [
 
 const experiences = [
   {
-    organization: "PRADA Lab, KAUST",
-    role: "Visiting Student",
-    period: "Mar 2026 — Oct 2026",
-    location: "Saudi Arabia & Remote",
-    advisor: "Prof. Di Wang",
-    projects: [
-      "Latent reasoning faithfulness along training trajectories: verified counterfactual edits and latent-state interventions show that accuracy can rise while responsiveness to the required reasoning path falls.",
-    ],
-  },
-  {
     organization: "Aether AI",
     role: "Research Intern",
     period: "Jun 2026 — Present",
@@ -107,6 +97,16 @@ const experiences = [
     projects: [
       "RobotAgentBench: co-authored a benchmark for open-world robot autonomy, contributing to the construction of its simulation data.",
       "Execution-time verification for robot-use agents, detecting failures during VLA execution, with natural failure-data generation in Genie Sim.",
+    ],
+  },
+  {
+    organization: "PRADA Lab, KAUST",
+    role: "Visiting Student",
+    period: "Mar 2026 — Oct 2026",
+    location: "Saudi Arabia & Remote",
+    advisor: "Prof. Di Wang",
+    projects: [
+      "Latent reasoning faithfulness along training trajectories: verified counterfactual edits and latent-state interventions show that accuracy can rise while responsiveness to the required reasoning path falls.",
     ],
   },
   {
