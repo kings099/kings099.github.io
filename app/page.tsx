@@ -348,7 +348,6 @@ export default function Home() {
           <div className="timeline">
             {experiences.map((experience) => (
               <article className="timeline-item" key={`${experience.organization}-${experience.period}`}>
-                <div className="timeline-marker" aria-hidden="true" />
                 <div className="timeline-date">
                   <span>{experience.period}</span>
                   <span>{experience.location}</span>
