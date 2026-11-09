@@ -1,6 +1,23 @@
 const publications = [
   {
     year: "2026",
+    badge: "Preprint",
+    title: "RobotAgentBench: Towards Open-world Robot Autonomy",
+    authors:
+      "Lingjun Mao†, Jinglin Cao†, Lukun He†, Wenpeng Xu, Yuchen Yan, Hengyu Jin, Zijun Zhang, Jinzhou Tang, Songyao Jin, Ziche Liu, Yifei Shao, Junbo Huang, Fang Nan, Ruobing Han, Ziqiao Xi, Ziming Xu, Shuang Liang, Sibo Zhu, Wenyi Wu, Xinyue Wang, Yiming Huang, Xinkai Zou, Gao Zhu, Kun Zhou, Biwei Huang († equal contribution)",
+    venue: "arXiv",
+    summary:
+      "A benchmark for robot agents in realistic household environments, evaluating task discovery, reasoning, manipulation, recovery, and robustness under a shared planning–execution–verification framework.",
+    links: [
+      { label: "arXiv", href: "https://arxiv.org/abs/2610.34649" },
+      {
+        label: "Project",
+        href: "https://aetherlabsai.github.io/RobotAgentBench/",
+      },
+    ],
+  },
+  {
+    year: "2026",
     badge: "First author",
     title:
       "Final Checkpoints Are Not Enough: Analyzing Latent Reasoning Faithfulness Along Training Trajectories",
@@ -12,17 +29,6 @@ const publications = [
       { label: "arXiv", href: "https://arxiv.org/abs/2607.06648" },
       { label: "PDF", href: "https://arxiv.org/pdf/2607.06648" },
     ],
-  },
-  {
-    year: "2026",
-    badge: "First author",
-    title:
-      "Concord: An Interactive Environment for Evaluating Multi-User Agents under Distributed Information and Consent",
-    authors: "Hengyu Jin, Shu Yang, Di Wang",
-    venue: "Under review at ACL Rolling Review",
-    summary:
-      "An interactive environment where one agent serves several interdependent users, showing that obtaining users' consent, not gathering their information, is the main bottleneck.",
-    links: [],
   },
   {
     year: "2026",
@@ -79,23 +85,6 @@ const publications = [
       },
     ],
   },
-  {
-    year: "2026",
-    badge: "Preprint",
-    title: "RobotAgentBench: Towards Open-world Robot Autonomy",
-    authors:
-      "Lingjun Mao†, Jinglin Cao†, Lukun He†, Wenpeng Xu, Yuchen Yan, Hengyu Jin, Zijun Zhang, Jinzhou Tang, Songyao Jin, Ziche Liu, Yifei Shao, Junbo Huang, Fang Nan, Ruobing Han, Ziqiao Xi, Ziming Xu, Shuang Liang, Sibo Zhu, Wenyi Wu, Xinyue Wang, Yiming Huang, Xinkai Zou, Gao Zhu, Kun Zhou, Biwei Huang († equal contribution)",
-    venue: "arXiv",
-    summary:
-      "A benchmark for robot agents in realistic household environments, evaluating task discovery, reasoning, manipulation, recovery, and robustness under a shared planning–execution–verification framework.",
-    links: [
-      { label: "arXiv", href: "https://arxiv.org/abs/2610.34649" },
-      {
-        label: "Project",
-        href: "https://aetherlabsai.github.io/RobotAgentBench/",
-      },
-    ],
-  },
 ];
 
 const experiences = [
@@ -107,7 +96,6 @@ const experiences = [
     advisor: "Prof. Di Wang",
     projects: [
       "Latent reasoning faithfulness along training trajectories: verified counterfactual edits and latent-state interventions show that accuracy can rise while responsiveness to the required reasoning path falls.",
-      "Concord: an interactive environment with 309 tasks and 190 groups of simulated users for evaluating agents that serve several interdependent users.",
     ],
   },
   {
@@ -166,7 +154,7 @@ export default function Home() {
       <header className="site-header">
         <nav className="nav-wrap" aria-label="Primary navigation">
           <a className="wordmark" href="#about" aria-label="Hengyu Jin, home">
-            HJ<span>.</span>
+            Hengyu Jin
           </a>
           <div className="nav-links">
             <a href="#research">Research</a>
@@ -236,102 +224,18 @@ export default function Home() {
               <li>Robot-Use Agent</li>
             </ul>
             <div className="focus-status">
-              <span className="status-dot" aria-hidden="true" />
               Open to research collaborations
             </div>
           </aside>
         </section>
 
-        <section className="updates section-shell" aria-labelledby="updates-title">
-          <div className="section-kicker" id="updates-title">
-            Recent updates
-          </div>
-          <div className="updates-list">
-            <article>
-              <time dateTime="2026-10">Oct 2026</time>
-              <p>
-                Released RobotAgentBench, a benchmark for open-world robot
-                autonomy, with Aether AI.
-              </p>
-            </article>
-            <article>
-              <time dateTime="2026-10">Oct 2026</time>
-              <p>
-                Submitted Concord, my second first-author paper on multi-user
-                agents, to ACL Rolling Review.
-              </p>
-            </article>
-            <article>
-              <time dateTime="2026-07">Jul 2026</time>
-              <p>CORA was published in IEEE Transactions on Affective Computing.</p>
-            </article>
-            <article>
-              <time dateTime="2026-07">Jul 2026</time>
-              <p>
-                Released our first-author preprint on latent reasoning
-                faithfulness across training trajectories and submitted it to
-                ACL Rolling Review.
-              </p>
-            </article>
-            <article>
-              <time dateTime="2026-07">Jul 2026</time>
-              <p>RISER appeared in Findings of ACL 2026.</p>
-            </article>
-            <article>
-              <time dateTime="2026-04">Apr 2026</time>
-              <p>Kairotask appeared in the CHI 2026 Extended Abstracts.</p>
-            </article>
-          </div>
-        </section>
-
-        <section className="section-shell content-section" id="research">
-          <div className="section-heading">
-            <p className="section-index">01 / Research</p>
-            <h2>Research interests</h2>
-            <p>
-              My work centers on understanding how foundation models reason
-              and building AI agents that behave reliably in practice.
-            </p>
-          </div>
-          <div className="research-grid">
-            <article className="research-card">
-              <span>01</span>
-              <h3>Reasoning and reliability</h3>
-              <p>
-                Studying how foundation models reason in latent and explicit
-                forms, and whether their reasoning stays faithful as they are
-                trained.
-              </p>
-            </article>
-            <article className="research-card">
-              <span>02</span>
-              <h3>AI agents</h3>
-              <p>
-                Building interactive environments for agents that serve several
-                users, and studying robot-use agents that plan, act, and
-                recover from failures.
-              </p>
-            </article>
-            <article className="research-card">
-              <span>03</span>
-              <h3>Robot-Use Agent</h3>
-              <p>
-                Understanding how agents can learn what a particular person
-                wants from personal context and interaction.
-              </p>
-            </article>
-          </div>
-        </section>
-
         <section className="section-shell content-section" id="publications">
           <div className="section-heading publication-heading">
             <div>
-              <p className="section-index">02 / Publications</p>
               <h2>Publications &amp; preprints</h2>
             </div>
             <p>
-              Official paper pages are linked through arXiv, ACL Anthology, and
-              publisher DOI records.
+              Selected papers and preprints.
             </p>
           </div>
 
@@ -367,9 +271,78 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="updates section-shell" aria-labelledby="updates-title">
+          <div className="section-kicker" id="updates-title">
+            Recent updates
+          </div>
+          <div className="updates-list">
+            <article>
+              <time dateTime="2026-10">Oct 2026</time>
+              <p>
+                Released RobotAgentBench, a benchmark for open-world robot
+                autonomy, with Aether AI.
+              </p>
+            </article>
+            <article>
+              <time dateTime="2026-07">Jul 2026</time>
+              <p>CORA was published in IEEE Transactions on Affective Computing.</p>
+            </article>
+            <article>
+              <time dateTime="2026-07">Jul 2026</time>
+              <p>
+                Released our first-author preprint on latent reasoning
+                faithfulness across training trajectories and submitted it to
+                ACL Rolling Review.
+              </p>
+            </article>
+            <article>
+              <time dateTime="2026-07">Jul 2026</time>
+              <p>RISER appeared in Findings of ACL 2026.</p>
+            </article>
+            <article>
+              <time dateTime="2026-04">Apr 2026</time>
+              <p>Kairotask appeared in the CHI 2026 Extended Abstracts.</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="section-shell content-section" id="research">
+          <div className="section-heading">
+            <h2>Research interests</h2>
+            <p>
+              My work centers on understanding how foundation models reason
+              and building AI agents that behave reliably in practice.
+            </p>
+          </div>
+          <div className="research-grid">
+            <article className="research-card">
+              <h3>Reasoning and reliability</h3>
+              <p>
+                Studying how foundation models reason in latent and explicit
+                forms, and whether their reasoning stays faithful as they are
+                trained.
+              </p>
+            </article>
+            <article className="research-card">
+              <h3>AI agents</h3>
+              <p>
+                Building interactive environments for agents that serve several
+                users, and studying robot-use agents that plan, act, and
+                recover from failures.
+              </p>
+            </article>
+            <article className="research-card">
+              <h3>Robot-Use Agent</h3>
+              <p>
+                Studying robot-use agents that plan, act, verify execution,
+                and recover from failures in realistic environments.
+              </p>
+            </article>
+          </div>
+        </section>
+
         <section className="section-shell content-section" id="experience">
           <div className="section-heading">
-            <p className="section-index">03 / Experience</p>
             <h2>Research experience</h2>
           </div>
           <div className="timeline">
@@ -404,7 +377,6 @@ export default function Home() {
 
         <section className="section-shell content-section" id="projects">
           <div className="section-heading">
-            <p className="section-index">04 / Projects</p>
             <h2>Selected projects</h2>
           </div>
           <div className="project-grid">
@@ -456,7 +428,6 @@ export default function Home() {
 
         <section className="section-shell background-section" aria-labelledby="background-title">
           <div className="background-heading">
-            <p className="section-index">05 / Background</p>
             <h2 id="background-title">Education &amp; recognition</h2>
           </div>
           <div className="background-grid">

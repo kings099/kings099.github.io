@@ -3,7 +3,7 @@ import "./globals.css";
 
 const title = "Hengyu Jin";
 const description =
-  "Hengyu Jin is an undergraduate researcher working on reasoning and reliability in foundation models, AI agents, and human–AI interaction.";
+  "Hengyu Jin is an undergraduate researcher working on reasoning and reliability in foundation models, AI agents, and robot-use agents.";
 const siteUrl = "https://kings099.github.io";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "reasoning in foundation models",
     "foundation models",
     "AI agents",
-    "human–AI interaction",
+    "robot-use agents",
   ],
   authors: [{ name: "Hengyu Jin" }],
   openGraph: {

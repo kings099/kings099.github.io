@@ -24,5 +24,4 @@ node --test tests/rendered-html.test.mjs
 - Main page content: `app/page.tsx`
 - Visual design: `app/globals.css`
 - Site metadata: `app/layout.tsx`
-- Downloadable CV: `public/Hengyu_Jin_CV.pdf`
 - Social preview: `public/og.png`

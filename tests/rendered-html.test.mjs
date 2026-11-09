@@ -16,7 +16,7 @@ test("statically exports Hengyu Jin's academic homepage", async () => {
   assert.match(html, /mailto:jhy99@tongji\.edu\.cn/);
   assert.doesNotMatch(html, /hengyuking@gmail\.com/);
   assert.doesNotMatch(html, /Hengyu_Jin_CV\.pdf|Curriculum Vitae|Download CV/i);
-  assert.match(html, /Concord: An Interactive Environment/);
+  assert.doesNotMatch(html, /Concord/i);
   assert.match(html, /RobotAgentBench/);
   assert.match(html, /for Supporting Emotion Regulation/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Your site is taking shape/i);
@@ -24,4 +24,14 @@ test("statically exports Hengyu Jin's academic homepage", async () => {
 
 test("does not publish the CV PDF", async () => {
   await assert.rejects(access(new URL("../out/Hengyu_Jin_CV.pdf", import.meta.url)), { code: "ENOENT" });
+});
+
+test("lists publications in the requested order", async () => {
+  const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
+  const section = html.split('id="publications"')[1].split('</section>')[0];
+  const titles = [...section.matchAll(/<h3>(.*?)<\/h3>/g)].map((match) => match[1]);
+  assert.equal(titles.length, 5);
+  ["RobotAgentBench:", "Final Checkpoints Are Not Enough:", "RISER:", "Kairotask:", "CORA:"].forEach((title, index) => {
+    assert.ok(titles[index].startsWith(title), titles[index]);
+  });
 });
