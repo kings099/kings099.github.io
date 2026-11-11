@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=hj-k-1", sizes: "16x16 32x32 48x48 256x256", type: "image/x-icon" },
+      { url: "/favicon.svg?v=hj-k-1", sizes: "any", type: "image/svg+xml" },
+    ],
+    apple: { url: "/apple-touch-icon.png?v=hj-k-1", sizes: "180x180", type: "image/png" },
+  },
   keywords: [
     "Hengyu Jin",
     "reliable AI",

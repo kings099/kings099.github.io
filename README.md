@@ -25,6 +25,7 @@ node --test tests/rendered-html.test.mjs
 - Visual design: `app/globals.css`
 - Site metadata: `app/layout.tsx`
 - Social preview: `public/og.png`
+- Favicon: `public/favicon.svg` (selected K pixel HJ), with ICO and Apple touch derivatives
 
 ## Visual assets
 
