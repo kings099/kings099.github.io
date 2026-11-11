@@ -139,6 +139,18 @@ const experiences = [
   },
 ];
 
+const peopleHomepages: Record<string, string> = {
+  "Di Wang": "https://shao3wangdi.github.io/",
+  "Ying Shen": "https://csyingshen.github.io/main/",
+  "Biwei Huang": "https://biweihuang.com/",
+};
+
+function LinkedPeople({ text }: { text: string }) {
+  return text.split(/(Di Wang|Ying Shen|Biwei Huang)/g).map((part, index) => (
+    peopleHomepages[part] ? <a key={index} href={peopleHomepages[part]} target="_blank" rel="noreferrer">{part}</a> : part
+  ));
+}
+
 function AuthorLine({ authors }: { authors: string }) {
   const [before, after = ""] = authors.split("Hengyu Jin");
 
@@ -221,10 +233,10 @@ export default function Home() {
                       {experience.role}
                       {experience.collaboration ? (
                         <> · Working with <a href={experience.collaboration.href} target="_blank" rel="noreferrer">{experience.collaboration.name}</a></>
-                      ) : experience.advisor ? ` · Advisor: ${experience.advisor}` : ""}
+                      ) : experience.advisor ? <> · Advisor: <LinkedPeople text={experience.advisor} /></> : ""}
                     </p>
                     <ul>
-                      {experience.projects.map((project) => <li key={project}>{project}</li>)}
+                      {experience.projects.map((project) => <li key={project}><LinkedPeople text={project} /></li>)}
                       {experience.collaboration ? (
                         <li>Work with <a href={experience.collaboration.href} target="_blank" rel="noreferrer">{experience.collaboration.name}</a> {experience.collaboration.description}</li>
                       ) : null}
