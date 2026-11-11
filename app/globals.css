@@ -26,6 +26,7 @@ strong { font-weight: 600; }
 .interests { margin: 0.5rem 0 1rem; padding-left: 1.25rem; }
 .interests li { padding-left: 0.15rem; }
 .profile-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.3rem; }
+.profile-link { display: inline-flex; align-items: center; gap: 0.7rem; }
 .profile-links span { color: #aaa; }
 .portrait { display: block; width: 220px; height: auto; aspect-ratio: 1280 / 1707; border-radius: 3px; }
 .affiliations { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; gap: 1.6rem; padding: 1.5rem 0 2rem; }

@@ -198,10 +198,22 @@ export default function Home() {
             </ul>
             <div className="profile-links">
               <a href="mailto:jhy99@tongji.edu.cn">Email</a>
-              <span aria-hidden="true">/</span>
-              <a href="https://scholar.google.com/citations?user=R7hqHtEAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
-              <span aria-hidden="true">/</span>
-              <a href="https://github.com/kings099" target="_blank" rel="noreferrer">GitHub</a>
+              <span className="profile-link">
+                <span aria-hidden="true">/</span>
+                <a href="https://scholar.google.com/citations?user=R7hqHtEAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+              </span>
+              <span className="profile-link">
+                <span aria-hidden="true">/</span>
+                <a href="https://github.com/kings099" target="_blank" rel="noreferrer">GitHub</a>
+              </span>
+              <span className="profile-link">
+                <span aria-hidden="true">/</span>
+                <a href="https://www.linkedin.com/in/hengyu-jin-8512183a5/" target="_blank" rel="noreferrer">LinkedIn</a>
+              </span>
+              <span className="profile-link">
+                <span aria-hidden="true">/</span>
+                <a href="https://x.com/H_J_9_9" target="_blank" rel="noreferrer">X</a>
+              </span>
             </div>
           </div>
           <img className="portrait" src="/portrait.jpg" width="220" height="293" alt="Portrait of Hengyu Jin" fetchPriority="high" />
