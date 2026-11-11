@@ -30,7 +30,8 @@ node --test tests/rendered-html.test.mjs
 
 - Portrait: user-supplied `df3650e055422a5cb7bc402cf1aa78db.JPG`, stored as `public/portrait.jpg`.
 - Tongji logo: https://www.tongji.edu.cn/images/logo.png
-- Tsinghua Future Laboratory vector logo: https://thfl.tsinghua.edu.cn/images/logo1.svg
+- Tsinghua University crest (experience only): https://commons.wikimedia.org/wiki/File:Tsinghua_University_Logo.svg (Tsinghua University; public domain).
+- Tsinghua Future Laboratory vector logo (top affiliation row): https://thfl.tsinghua.edu.cn/images/logo1.svg
 - KAUST bilingual vector wordmark: https://admissions.kaust.edu.sa/images/default-source/interface/site-branding/KAUST_Logo.svg
 - Aether AI logo: https://aetherlabsai.github.io/RobotAgentBench/assets/img/aetherai-wordmark-color.svg
 

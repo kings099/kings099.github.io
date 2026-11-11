@@ -51,6 +51,7 @@ strong { font-weight: 600; }
 .experience:last-child { margin-bottom: 0; }
 .experience-logo { display: flex; align-items: center; justify-content: center; min-height: 58px; }
 .experience-logo img { width: 100%; height: 58px; object-fit: contain; }
+.experience-logo.logo-tsinghua img { width: 58px; height: 58px; filter: none; opacity: 1; }
 .experience-content { min-width: 0; }
 .experience-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.2rem 1rem; }
 .experience-heading > span { color: var(--muted); font-size: 0.82rem; }
@@ -70,6 +71,7 @@ strong { font-weight: 600; }
   .affiliations { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
   .experience { grid-template-columns: 64px minmax(0, 1fr); gap: 1rem; }
   .experience-logo, .experience-logo img { min-height: 44px; height: 44px; }
+  .experience-logo.logo-tsinghua img { width: 44px; height: 44px; }
   .news-list li { grid-template-columns: 72px minmax(0, 1fr); gap: 0.6rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

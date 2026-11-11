@@ -234,10 +234,11 @@ export default function Home() {
           <div className="experience-list">
             {experiences.map((experience) => {
               const affiliation = affiliations.find((item) => experience.organization.includes(item.name === "KAUST" ? "KAUST" : item.name));
+              const experienceLogo = experience.organization === "Tsinghua University" ? "/logos/tsinghua-crest.svg" : affiliation?.image;
               return (
                 <article className="experience" key={experience.organization}>
                   <div className={`experience-logo ${affiliation?.className ?? ""}`}>
-                    {affiliation ? <img src={affiliation.image} alt={`${affiliation.name} logo`} width="100" height="58" loading="lazy" /> : null}
+                    {affiliation && experienceLogo ? <img src={experienceLogo} alt={`${affiliation.name} ${experience.organization === "Tsinghua University" ? "crest" : "logo"}`} width="100" height="58" loading="lazy" /> : null}
                   </div>
                   <div className="experience-content">
                     <div className="experience-heading"><h3>{experience.organization}</h3><span>{experience.period}</span></div>
