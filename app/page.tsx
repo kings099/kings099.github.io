@@ -206,13 +206,15 @@ export default function Home() {
                 <span aria-hidden="true">/</span>
                 <a href="https://github.com/kings099" target="_blank" rel="noreferrer">GitHub</a>
               </span>
-              <span className="profile-link">
-                <span aria-hidden="true">/</span>
-                <a href="https://www.linkedin.com/in/hengyu-jin-8512183a5/" target="_blank" rel="noreferrer">LinkedIn</a>
-              </span>
-              <span className="profile-link">
-                <span aria-hidden="true">/</span>
-                <a href="https://x.com/H_J_9_9" target="_blank" rel="noreferrer">X</a>
+              <span className="profile-social-links">
+                <span className="profile-link">
+                  <span className="social-leading-separator" aria-hidden="true">/</span>
+                  <a href="https://www.linkedin.com/in/hengyu-jin-8512183a5/" target="_blank" rel="noreferrer">LinkedIn</a>
+                </span>
+                <span className="profile-link">
+                  <span aria-hidden="true">/</span>
+                  <a href="https://x.com/H_J_9_9" target="_blank" rel="noreferrer">X</a>
+                </span>
               </span>
             </div>
           </div>
