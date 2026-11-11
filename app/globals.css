@@ -43,6 +43,10 @@ strong { font-weight: 600; }
 .publication-authors strong { color: #111; }
 .publication-venue { margin: 0.15rem 0; font-size: 0.92rem; font-style: italic; }
 .publication-links { display: flex; flex-wrap: wrap; gap: 0.65rem; font-size: 0.9rem; }
+.publication-abstract { margin-top: 0.4rem; }
+.publication-abstract summary { width: fit-content; color: var(--link); cursor: pointer; font-size: 0.9rem; }
+.publication-abstract summary:hover { text-decoration: underline; text-underline-offset: 3px; }
+.publication-abstract summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
 .publication-summary { margin: 0.4rem 0 0; color: #555; font-size: 0.9rem; }
 .news-list { list-style: none; padding: 0; margin: 0; }
 .news-list li { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 1rem; margin: 0.45rem 0; font-size: 0.92rem; }

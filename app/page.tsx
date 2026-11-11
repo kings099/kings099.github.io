@@ -160,8 +160,8 @@ export default function Home() {
       <header className="site-header">
         <nav aria-label="Primary navigation">
           <a href="#about">About</a>
-          <a href="#publications">Publications</a>
           <a href="#experience">Experience</a>
+          <a href="#publications">Publications</a>
           <a href="mailto:jhy99@tongji.edu.cn">Contact</a>
         </nav>
       </header>
@@ -199,36 +199,6 @@ export default function Home() {
           ))}
         </div>
 
-        <section className="content-section" id="publications" aria-labelledby="publications-title">
-          <h2 id="publications-title">Publications &amp; preprints</h2>
-          <div className="publication-list">
-            {publications.map((publication) => (
-              <article className="publication" key={publication.title}>
-                <h3>{publication.title}</h3>
-                <AuthorLine authors={publication.authors} />
-                <p className="publication-venue">{publication.venue}{publication.badge === "First author" ? " · First author" : ""}</p>
-                <div className="publication-links" aria-label={`Links for ${publication.title}`}>
-                  {publication.links.map((link) => (
-                    <a href={link.href} key={link.href} target="_blank" rel="noreferrer">[{link.label}]</a>
-                  ))}
-                </div>
-                <p className="publication-summary">{publication.summary}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="content-section news" aria-labelledby="news-title">
-          <h2 id="news-title">News</h2>
-          <ul className="news-list">
-            <li><time dateTime="2026-10">Oct 2026</time><span>Released RobotAgentBench with Aether AI.</span></li>
-            <li><time dateTime="2026-07">Jul 2026</time><span>CORA was published in IEEE Transactions on Affective Computing.</span></li>
-            <li><time dateTime="2026-07">Jul 2026</time><span>Released our first-author preprint on latent reasoning faithfulness along training trajectories.</span></li>
-            <li><time dateTime="2026-07">Jul 2026</time><span>RISER appeared in Findings of ACL 2026.</span></li>
-            <li><time dateTime="2026-04">Apr 2026</time><span>Kairotask appeared in the CHI 2026 Extended Abstracts.</span></li>
-          </ul>
-        </section>
-
         <section className="content-section" id="experience" aria-labelledby="experience-title">
           <h2 id="experience-title">Research experience</h2>
           <div className="experience-list">
@@ -250,6 +220,40 @@ export default function Home() {
             })}
           </div>
         </section>
+
+        <section className="content-section" id="publications" aria-labelledby="publications-title">
+          <h2 id="publications-title">Publications &amp; preprints</h2>
+          <div className="publication-list">
+            {publications.map((publication) => (
+              <article className="publication" key={publication.title}>
+                <h3>{publication.title}</h3>
+                <AuthorLine authors={publication.authors} />
+                <p className="publication-venue">{publication.venue}{publication.badge === "First author" ? " · First author" : ""}</p>
+                <div className="publication-links" aria-label={`Links for ${publication.title}`}>
+                  {publication.links.map((link) => (
+                    <a href={link.href} key={link.href} target="_blank" rel="noreferrer">[{link.label}]</a>
+                  ))}
+                </div>
+                <details className="publication-abstract">
+                  <summary>Abstract</summary>
+                  <p className="publication-summary">{publication.summary}</p>
+                </details>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="content-section news" aria-labelledby="news-title">
+          <h2 id="news-title">News</h2>
+          <ul className="news-list">
+            <li><time dateTime="2026-10">Oct 2026</time><span>Released RobotAgentBench with Aether AI.</span></li>
+            <li><time dateTime="2026-07">Jul 2026</time><span>CORA was published in IEEE Transactions on Affective Computing.</span></li>
+            <li><time dateTime="2026-07">Jul 2026</time><span>Released our first-author preprint on latent reasoning faithfulness along training trajectories.</span></li>
+            <li><time dateTime="2026-07">Jul 2026</time><span>RISER appeared in Findings of ACL 2026.</span></li>
+            <li><time dateTime="2026-04">Apr 2026</time><span>Kairotask appeared in the CHI 2026 Extended Abstracts.</span></li>
+          </ul>
+        </section>
+
         <VisitorMap />
       </main>
       <footer className="site-footer"><span>© 2026 Hengyu Jin</span><a href="mailto:jhy99@tongji.edu.cn">jhy99@tongji.edu.cn</a></footer>
