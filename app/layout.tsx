@@ -3,7 +3,7 @@ import "./globals.css";
 
 const title = "Hengyu Jin";
 const description =
-  "Hengyu Jin is an undergraduate researcher working on reasoning and reliability in foundation models, AI agents, and robot-use agents.";
+  "Hengyu Jin is an undergraduate student at Tongji University and a Research Intern at Aether AI. His research focuses on reliability and reasoning in foundation models, robot-use agent systems, and AI agents.";
 const siteUrl = "https://kings099.github.io";
 
 export const metadata: Metadata = {

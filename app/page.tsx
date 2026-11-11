@@ -1,3 +1,5 @@
+import VisitorMap from "./visitor-map";
+
 const publications = [
   {
     year: "2026",
@@ -144,258 +146,112 @@ function AuthorLine({ authors }: { authors: string }) {
   );
 }
 
+const affiliations = [
+  { name: "Tongji University", image: "/logos/tongji.png", url: "https://www.tongji.edu.cn/", className: "logo-tongji" },
+  { name: "Tsinghua University", image: "/logos/tsinghua.png", url: "https://www.tsinghua.edu.cn/en/", className: "logo-tsinghua" },
+  { name: "KAUST", image: "/logos/kaust.svg", url: "https://www.kaust.edu.sa/", className: "logo-kaust" },
+  { name: "Aether AI", image: "/logos/aether.svg", url: "https://aetherlabsai.github.io/RobotAgentBench/", className: "logo-aether" },
+];
+
 export default function Home() {
   return (
     <div className="site-shell">
-      <a className="skip-link" href="#main-content">
-        Skip to content
-      </a>
-
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
-        <nav className="nav-wrap" aria-label="Primary navigation">
-          <a className="wordmark" href="#about" aria-label="Hengyu Jin, home">
-            Hengyu Jin
-          </a>
-          <div className="nav-links">
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#experience">Experience</a>
-          </div>
-          <a className="nav-contact" href="mailto:jhy99@tongji.edu.cn">
-            Contact <span aria-hidden="true">↗</span>
-          </a>
+        <nav aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="mailto:jhy99@tongji.edu.cn">Contact</a>
         </nav>
       </header>
-
       <main id="main-content">
-        <section className="hero section-shell" id="about">
-          <div className="hero-copy">
-            <p className="eyebrow">Undergraduate researcher in artificial intelligence</p>
-            <h1>Hengyu Jin</h1>
-            <p className="hero-lede">
-              I study reasoning and reliability in foundation models, and how AI
-              agents work with the people they serve.
+        <section className="profile" id="about" aria-labelledby="profile-name">
+          <div className="profile-copy">
+            <h1 id="profile-name">Hengyu Jin</h1>
+            <p>
+              I am an undergraduate student at <a href="https://www.tongji.edu.cn/">Tongji University</a>,
+              currently a Research Intern at <a href="https://aetherlabsai.github.io/RobotAgentBench/">Aether AI</a>.
             </p>
-            <div className="hero-facts" aria-label="Academic profile">
-              <div className="hero-fact">
-                <p>Education</p>
-                <div>
-                  <strong>Tongji University</strong>
-                  <span>B.Eng. in Software Engineering · GPA 4.60 / 5.00</span>
-                </div>
-              </div>
-              <div className="hero-fact">
-                <p>Current</p>
-                <div>
-                  <strong>Research Intern · Aether AI</strong>
-                  <span>Previously Visiting Student · PRADA Lab, KAUST</span>
-                </div>
-              </div>
-            </div>
-            <div className="hero-actions">
-              <a className="button button-secondary" href="mailto:jhy99@tongji.edu.cn">
-                Email me <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                className="button button-secondary"
-                href="https://scholar.google.com/citations?user=R7hqHtEAAAAJ&hl=en&oi=ao"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Scholar <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                className="button button-secondary"
-                href="https://github.com/kings099"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub <span aria-hidden="true">↗</span>
-              </a>
+            <p>My research interests center on:</p>
+            <ul className="interests">
+              <li><strong>Reliability and Reasoning in Foundation Models</strong></li>
+              <li><strong>Robot-Use Agent Systems</strong></li>
+              <li><strong>AI Agents</strong></li>
+            </ul>
+            <div className="profile-links">
+              <a href="mailto:jhy99@tongji.edu.cn">Email</a>
+              <span aria-hidden="true">/</span>
+              <a href="https://scholar.google.com/citations?user=R7hqHtEAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+              <span aria-hidden="true">/</span>
+              <a href="https://github.com/kings099" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
-
-          <aside className="focus-panel" aria-label="Research focus">
-            <p className="focus-label">Research interests</p>
-            <ul>
-              <li>Reasoning and Reliability in Foundation Models</li>
-              <li>AI Agents</li>
-              <li>Robot-Use Agent</li>
-            </ul>
-            <div className="focus-status">
-              Open to research collaborations
-            </div>
-          </aside>
+          <img className="portrait" src="/portrait.jpg" width="220" height="293" alt="Portrait of Hengyu Jin" fetchPriority="high" />
         </section>
 
-        <section className="section-shell content-section" id="publications">
-          <div className="section-heading publication-heading">
-            <div>
-              <h2>Publications &amp; preprints</h2>
-            </div>
-            <p>
-              Selected papers and preprints.
-            </p>
-          </div>
+        <div className="affiliations" aria-label="Current and previous affiliations">
+          {affiliations.map((affiliation) => (
+            <a className={`affiliation ${affiliation.className}`} href={affiliation.url} key={affiliation.name} target="_blank" rel="noreferrer">
+              <img src={affiliation.image} alt={`${affiliation.name} logo`} width="160" height="58" />
+              <span>{affiliation.name}</span>
+            </a>
+          ))}
+        </div>
 
+        <section className="content-section" id="publications" aria-labelledby="publications-title">
+          <h2 id="publications-title">Publications &amp; preprints</h2>
           <div className="publication-list">
             {publications.map((publication) => (
               <article className="publication" key={publication.title}>
-                <div className="publication-year">{publication.year}</div>
-                <div className="publication-body">
-                  <div className="publication-meta">
-                    <span>{publication.badge}</span>
-                    <span>{publication.venue}</span>
-                  </div>
-                  <h3>{publication.title}</h3>
-                  <AuthorLine authors={publication.authors} />
-                  <p className="publication-summary">{publication.summary}</p>
-                  {publication.links.length > 0 ? (
-                  <div className="publication-links" aria-label={`Links for ${publication.title}`}>
-                    {publication.links.map((link) => (
-                      <a
-                        href={link.href}
-                        key={link.href}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {link.label} <span aria-hidden="true">↗</span>
-                      </a>
-                    ))}
-                  </div>
-                  ) : null}
+                <h3>{publication.title}</h3>
+                <AuthorLine authors={publication.authors} />
+                <p className="publication-venue">{publication.venue}{publication.badge === "First author" ? " · First author" : ""}</p>
+                <div className="publication-links" aria-label={`Links for ${publication.title}`}>
+                  {publication.links.map((link) => (
+                    <a href={link.href} key={link.href} target="_blank" rel="noreferrer">[{link.label}]</a>
+                  ))}
                 </div>
+                <p className="publication-summary">{publication.summary}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="updates section-shell" aria-labelledby="updates-title">
-          <div className="section-kicker" id="updates-title">
-            Recent updates
-          </div>
-          <div className="updates-list">
-            <article>
-              <time dateTime="2026-10">Oct 2026</time>
-              <p>
-                Released RobotAgentBench, a benchmark for open-world robot
-                autonomy, with Aether AI.
-              </p>
-            </article>
-            <article>
-              <time dateTime="2026-07">Jul 2026</time>
-              <p>CORA was published in IEEE Transactions on Affective Computing.</p>
-            </article>
-            <article>
-              <time dateTime="2026-07">Jul 2026</time>
-              <p>
-                Released our first-author preprint on latent reasoning
-                faithfulness across training trajectories and submitted it to
-                ACL Rolling Review.
-              </p>
-            </article>
-            <article>
-              <time dateTime="2026-07">Jul 2026</time>
-              <p>RISER appeared in Findings of ACL 2026.</p>
-            </article>
-            <article>
-              <time dateTime="2026-04">Apr 2026</time>
-              <p>Kairotask appeared in the CHI 2026 Extended Abstracts.</p>
-            </article>
-          </div>
+        <section className="content-section news" aria-labelledby="news-title">
+          <h2 id="news-title">News</h2>
+          <ul className="news-list">
+            <li><time dateTime="2026-10">Oct 2026</time><span>Released RobotAgentBench with Aether AI.</span></li>
+            <li><time dateTime="2026-07">Jul 2026</time><span>CORA was published in IEEE Transactions on Affective Computing.</span></li>
+            <li><time dateTime="2026-07">Jul 2026</time><span>Released our first-author preprint on latent reasoning faithfulness along training trajectories.</span></li>
+            <li><time dateTime="2026-07">Jul 2026</time><span>RISER appeared in Findings of ACL 2026.</span></li>
+            <li><time dateTime="2026-04">Apr 2026</time><span>Kairotask appeared in the CHI 2026 Extended Abstracts.</span></li>
+          </ul>
         </section>
 
-        <section className="section-shell content-section" id="research">
-          <div className="section-heading">
-            <h2>Research interests</h2>
-            <p>
-              My work centers on understanding how foundation models reason
-              and building AI agents that behave reliably in practice.
-            </p>
-          </div>
-          <div className="research-grid">
-            <article className="research-card">
-              <h3>Reasoning and reliability</h3>
-              <p>
-                Studying how foundation models reason in latent and explicit
-                forms, and whether their reasoning stays faithful as they are
-                trained.
-              </p>
-            </article>
-            <article className="research-card">
-              <h3>AI agents</h3>
-              <p>
-                Building interactive environments for agents that serve several
-                users, and studying robot-use agents that plan, act, and
-                recover from failures.
-              </p>
-            </article>
-            <article className="research-card">
-              <h3>Robot-Use Agent</h3>
-              <p>
-                Studying robot-use agents that plan, act, verify execution,
-                and recover from failures in realistic environments.
-              </p>
-            </article>
+        <section className="content-section" id="experience" aria-labelledby="experience-title">
+          <h2 id="experience-title">Research experience</h2>
+          <div className="experience-list">
+            {experiences.map((experience) => {
+              const affiliation = affiliations.find((item) => experience.organization.includes(item.name === "KAUST" ? "KAUST" : item.name));
+              return (
+                <article className="experience" key={experience.organization}>
+                  <div className={`experience-logo ${affiliation?.className ?? ""}`}>
+                    {affiliation ? <img src={affiliation.image} alt={`${affiliation.name} logo`} width="100" height="58" loading="lazy" /> : null}
+                  </div>
+                  <div className="experience-content">
+                    <div className="experience-heading"><h3>{experience.organization}</h3><span>{experience.period}</span></div>
+                    <p className="experience-role">{experience.role}{experience.advisor ? ` · Advisor: ${experience.advisor}` : ""}</p>
+                    <ul>{experience.projects.map((project) => <li key={project}>{project}</li>)}</ul>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
-
-        <section className="section-shell content-section" id="experience">
-          <div className="section-heading">
-            <h2>Research experience</h2>
-          </div>
-          <div className="timeline">
-            {experiences.map((experience) => (
-              <article className="timeline-item" key={`${experience.organization}-${experience.period}`}>
-                <div className="timeline-date">
-                  <span>{experience.period}</span>
-                  <span>{experience.location}</span>
-                </div>
-                <div className="timeline-content">
-                  <h3>{experience.organization}</h3>
-                  <p className="timeline-role">
-                    {experience.role}
-                    {experience.advisor ? (
-                      <>
-                        {" "}
-                        <span>·</span> Advisor: {experience.advisor}
-                      </>
-                    ) : null}
-                  </p>
-                  <ul>
-                    {experience.projects.map((project) => (
-                      <li key={project}>{project}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
+        <VisitorMap />
       </main>
-
-      <footer className="site-footer section-shell">
-        <div>
-          <p className="footer-title">Let&apos;s talk research.</p>
-          <a href="mailto:jhy99@tongji.edu.cn">jhy99@tongji.edu.cn</a>
-        </div>
-        <div className="footer-meta">
-          <div className="footer-links">
-            <a
-              href="https://scholar.google.com/citations?user=R7hqHtEAAAAJ&hl=en&oi=ao"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Google Scholar <span aria-hidden="true">↗</span>
-            </a>
-            <a href="https://github.com/kings099" target="_blank" rel="noreferrer">
-              GitHub <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <p>© 2026 Hengyu Jin</p>
-        </div>
-      </footer>
+      <footer className="site-footer"><span>© 2026 Hengyu Jin</span><a href="mailto:jhy99@tongji.edu.cn">jhy99@tongji.edu.cn</a></footer>
     </div>
   );
 }
