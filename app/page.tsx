@@ -120,6 +120,11 @@ const experiences = [
     projects: [
       "Kairotask: context-aware scheduling from vague intentions, combining Qwen-Plus reasoning with an iOS geofencing field study.",
     ],
+    collaboration: {
+      name: "Dr. Jiachen Du",
+      href: "https://thfl.tsinghua.edu.cn/en/yjdw/Alumni1/Central_Organization1/Human_Computer_Interaction__and_User_Experience/Jiachen_Du.htm",
+      description: "on the design and development of a context-aware personal agent startup.",
+    },
   },
   {
     organization: "Tongji University",
@@ -213,7 +218,12 @@ export default function Home() {
                   <div className="experience-content">
                     <div className="experience-heading"><h3>{experience.organization}</h3><span>{experience.period}</span></div>
                     <p className="experience-role">{experience.role}{experience.advisor ? ` · Advisor: ${experience.advisor}` : ""}</p>
-                    <ul>{experience.projects.map((project) => <li key={project}>{project}</li>)}</ul>
+                    <ul>
+                      {experience.projects.map((project) => <li key={project}>{project}</li>)}
+                      {experience.collaboration ? (
+                        <li>Work with <a href={experience.collaboration.href} target="_blank" rel="noreferrer">{experience.collaboration.name}</a> {experience.collaboration.description}</li>
+                      ) : null}
+                    </ul>
                   </div>
                 </article>
               );
