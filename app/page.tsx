@@ -150,7 +150,7 @@ const affiliations = [
   { name: "Tongji University", image: "/logos/tongji.png", url: "https://www.tongji.edu.cn/", className: "logo-tongji" },
   { name: "Tsinghua University", image: "/logos/future-lab.svg", url: "https://thfl.tsinghua.edu.cn/", className: "logo-tsinghua" },
   { name: "KAUST", image: "/logos/kaust-wordmark.svg", url: "https://www.kaust.edu.sa/", className: "logo-kaust" },
-  { name: "Aether AI", image: "/logos/aether.svg", url: "https://aetherlabsai.github.io/RobotAgentBench/", className: "logo-aether" },
+  { name: "Aether AI", image: "/logos/aether.svg", url: "https://aetherlabs.ai/", className: "logo-aether" },
 ];
 
 export default function Home() {
@@ -171,7 +171,7 @@ export default function Home() {
             <h1 id="profile-name">Hengyu Jin</h1>
             <p>
               I am an undergraduate student at <a href="https://www.tongji.edu.cn/">Tongji University</a>,
-              currently a Research Intern at <a href="https://aetherlabsai.github.io/RobotAgentBench/">Aether AI</a>.
+              currently a Research Intern at <a href="https://aetherlabs.ai/">Aether AI</a>.
             </p>
             <p>My research interests center on:</p>
             <ul className="interests">
