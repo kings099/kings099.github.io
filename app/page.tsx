@@ -116,7 +116,7 @@ const experiences = [
     role: "Research Intern",
     period: "Jun 2025 — Oct 2025",
     location: "Remote",
-    advisor: "Prof. Xinyi Fu",
+    advisor: "",
     projects: [
       "Kairotask: context-aware scheduling from vague intentions, combining Qwen-Plus reasoning with an iOS geofencing field study.",
     ],
@@ -217,7 +217,12 @@ export default function Home() {
                   </div>
                   <div className="experience-content">
                     <div className="experience-heading"><h3>{experience.organization}</h3><span>{experience.period}</span></div>
-                    <p className="experience-role">{experience.role}{experience.advisor ? ` · Advisor: ${experience.advisor}` : ""}</p>
+                    <p className="experience-role">
+                      {experience.role}
+                      {experience.collaboration ? (
+                        <> · Working with <a href={experience.collaboration.href} target="_blank" rel="noreferrer">{experience.collaboration.name}</a></>
+                      ) : experience.advisor ? ` · Advisor: ${experience.advisor}` : ""}
+                    </p>
                     <ul>
                       {experience.projects.map((project) => <li key={project}>{project}</li>)}
                       {experience.collaboration ? (
