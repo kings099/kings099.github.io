@@ -98,7 +98,7 @@ const experiences = [
     advisor: "Prof. Biwei Huang (UC San Diego)",
     projects: [
       "RobotAgentBench: co-authored a benchmark for open-world robot autonomy, contributing to the construction of its simulation data.",
-      "Execution-time verification for robot-use agents, detecting failures during VLA execution, with natural failure-data generation in Genie Sim.",
+      "Working on Robot Agent System",
     ],
   },
   {
@@ -148,8 +148,8 @@ function AuthorLine({ authors }: { authors: string }) {
 
 const affiliations = [
   { name: "Tongji University", image: "/logos/tongji.png", url: "https://www.tongji.edu.cn/", className: "logo-tongji" },
-  { name: "Tsinghua University", image: "/logos/tsinghua.png", url: "https://www.tsinghua.edu.cn/en/", className: "logo-tsinghua" },
-  { name: "KAUST", image: "/logos/kaust.svg", url: "https://www.kaust.edu.sa/", className: "logo-kaust" },
+  { name: "Tsinghua University", image: "/logos/future-lab.svg", url: "https://thfl.tsinghua.edu.cn/", className: "logo-tsinghua" },
+  { name: "KAUST", image: "/logos/kaust-wordmark.svg", url: "https://www.kaust.edu.sa/", className: "logo-kaust" },
   { name: "Aether AI", image: "/logos/aether.svg", url: "https://aetherlabsai.github.io/RobotAgentBench/", className: "logo-aether" },
 ];
 
