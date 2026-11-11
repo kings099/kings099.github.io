@@ -45,3 +45,11 @@ in `app/visitor-map.tsx`. The public widget key is provided by the owner and is
 specific to this homepage. Statistics start with visits recorded by this widget;
 previous whos.amung.us data is not migrated. Manage the widget at
 https://mapmyvisitors.com/ using the owner's account.
+
+## Abstract sources
+
+The expandable abstracts reproduce the original paper text (PDF line wraps are
+normalized). RAB and Final Checkpoints use their linked arXiv abstracts; RISER
+uses ACL Anthology. Kairotask uses the [HKUST publication record](https://researchportal.hkust.edu.hk/en/publications/kairotask-probing-the-bridge-between-vague-intents-and-spatiotemp/)
+(CC BY). CORA uses the author's local manuscript, `TAFFC_2025_CORA.pdf`; its
+abstract differs from the later publisher version.
