@@ -39,7 +39,8 @@ White Tongji and Future Laboratory wordmarks are displayed in monochrome using C
 
 ## Visitor locations
 
-The footer uses a whos.amung.us map generated for this homepage (`d0mhfgjao9`).
-It loads after hydration in `app/visitor-map.tsx`, records new visits, and links
-to https://whos.amung.us/stats/maps/d0mhfgjao9/. No historical visits are imported.
-The provider's optional third-party audience script is disabled in the widget configuration.
+The footer uses the site owner's MapMyVisitors globe embed, loaded after hydration
+in `app/visitor-map.tsx`. The public widget key is provided by the owner and is
+specific to this homepage. Statistics start with visits recorded by this widget;
+previous whos.amung.us data is not migrated. Manage the widget at
+https://mapmyvisitors.com/ using the owner's account.

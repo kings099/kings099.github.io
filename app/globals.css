@@ -60,7 +60,6 @@ strong { font-weight: 600; }
 .experience-content li + li { margin-top: 0.4rem; }
 .visitor-section { border-top: 1px solid var(--line); padding: 1.8rem 0; text-align: center; }
 .visitor-section h2 { margin-bottom: 1rem; font-size: 1rem; }
-.visitor-section img { display: block; width: min(100%, 320px); height: auto; margin: auto; }
 .site-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem 1rem; border-top: 1px solid var(--line); padding: 1.4rem 0 2rem; color: var(--muted); font-size: 0.79rem; }
 @media (max-width: 640px) {
   .site-shell { width: calc(100% - 2rem); }
@@ -75,6 +74,4 @@ strong { font-weight: 600; }
   .news-list li { grid-template-columns: 72px minmax(0, 1fr); gap: 0.6rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-.visitor-map { position: relative; width: 320px; height: 160px; max-width: 100%; margin: auto; overflow: hidden; text-align: left; }
-.visitor-map > span:not([id]) { position: relative; cursor: pointer; }
-.visitor-stats { display: inline-block; margin-top: 0.65rem; font-size: 0.8rem; }
+.visitor-map { position: relative; width: 300px; max-width: 100%; aspect-ratio: 1; margin: auto; text-align: left; }
